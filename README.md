@@ -111,26 +111,68 @@ Leider ohne erfolg.
 Quelle: https://tvheadend.org/projects/tvheadend/wiki/AptRepositories
 
 bei Usage
-sudo apt-get -y install coreutils wget apt-transport-https lsb-release ca-certificates
-echo "deb http://apt.tvheadend.org/stable raspbian-stretch main" | sudo tee -a /etc/apt/sources.list.d/tvheadend.list
-sudo apt-get update
+Weil es oft fehlgeschlagen ist, die Datei im Verzeichniss etc/apt/sources.list.d/tvheadend.list wieder löschen und dann sudo apt-get update und eine andere Version von tvheadend mal versuchen. 
+Oder diese Datei mal tvheadend.list manuell bearbeiten. 
+Denn die von TVheadEnd bezeichnete Version für Buster ist auf deren Server nicht existend, also musste ich Strech nehmen. 
 
-Ich erhielt folgende Fehlermeldung
-W: GPG-Fehler: http://apt.tvheadend.org/stable raspbian-stretch Release: Die folgenden Signaturen konnten nicht überprüft werden, weil ihr öffentlicher Schlüssel nicht verfügbar ist: NO_PUBKEY 89942AAE5CEAA174
-E: Das Depot »http://apt.tvheadend.org/stable raspbian-stretch Release« ist nicht signiert.
-N: Eine Aktualisierung von solch einem Depot kann nicht auf eine sichere Art durchgeführt werden, daher ist es standardmäßig deaktiviert.
-N: Weitere Details zur Erzeugung von Paketdepots sowie zu deren Benutzerkonfiguration finden Sie in der Handbuchseite apt-secure(8).
-
-weiter ging es mit:
-sudo apt-get install tvheadend
-leider war ab hier schluss...
-E: Paket tvheadend kann nicht gefunden werden.
-
-sudo dpkg-reconfigure tvheadend
-sudo service tvheadend restart
-
-
-Weil es fehlgeschlagen ist, die Datei etc/apt/sources.list.d/tvheadend wieder löschen und dann sudo apt-get update und eine andere Version von tvheadend dazu versuchen. 
-Fehlerursache das die deb nicht signiert ist.
+Fehlerursache das die deb nicht signiert ist, siehe hier:
 * https://www.google.com/search?q=debian+apt+nicht+signierte+installieren&oq=debian+apt+nicht+signierte+installieren&aqs=chrome..69i57j0i333.22622j0j7&sourceid=chrome&ie=UTF-8
 * https://www.heise.de/tipps-tricks/DEB-in-Debian-Systemen-installieren-so-klappt-s-4926444.html
+
+
+
+Diese nachfolgende Anleitung ab hier brachte den erwünschten Erfolgt!  
+Vorheriges brauch nicht unbedingt beachtet zu werden.
+
+Schritt 1.
+sudo apt-get -y install coreutils wget apt-transport-https lsb-release ca-certificates
+Ich habe bei mir den Super User-Mode auf den "root"-Benutzer gesetzt/gelegt und ist mit entscheidend wie sie sich in den Raspberry gewöhnlich einloggen, um damit auch TVheadend zu starten. 
+apt-get install sudo; usermod -aG sudo root
+
+
+Nachfolgend wird der Publickey mit diesem Befehl bekannt gegeben und sollte der gleiche sein, wie bei "Anschließend den zuvorgenannten Key" schon der Key von mir mit eingearbeitet worden ist. 
+wget -qO- https://doozer.io/keys/tvheadend/tvheadend/pgp | sudo tee /etc/apt/trusted.gpg.d/tvheadend.asc
+
+Anschließend den zuvorgenannten Key hier mit einfügen, wie in meinem Beispiel oder mein Beispiel dazu verwenden und die Enter/Eingabetaste drücken. 
+sudo wget -qO- https://doozer.io/keys/tvheadend/tvheadend/pgp | sudo apt-key add mQENBFrG/QIBCAC9tQeA0NRCQtu7vG1bBmWJCbsrfmo2lELhnsvUvZSG6C31aVhaVI5+I59rWDKjs4v30f7oGvlLgnRGjElP4+aHmVR53v8s3VCBmNkCO64lGc5Kv05RMsdiXRgCbj4Xzl6gwRbfPZngFta2SusPp0aBPrjqlH0ZEnqa5jFDhE6sVkJLTQXwTGGHGIWg6AL0WqkW/o6+iHTbg+qsW93Ij5FvzB09PNKw9a6i+QZiXK9fvE0qJbKBC0J2jReZjyi7nkyd2rOzkhyuz7xux1wIGn7oXSqusey/VFbTUAiZbVuScIW+rY+JV2HNCQlXLdkMP5aiaXGiLeeF8OFz8qNxwPudABEBAAG0JWh0dHBzOi8vZG9vemVyLmlvL3R2aGVhZGVuZC90dmhlYWRlbmSJAR8EEwEIAAkFAlrG/QICGwMACgkQiZQqrlzqoXRfFggARMKrW7K046ivtG8kIXB9RUCdWFOOCSn2ss2F9hcw8b4ro3mSMqlveVvm3myrA59MwoDpHMTONwe4ODCo89dtF0NlTEM2E6v//qHfVwBBjAJhg7eybuPfNZkkqiRUvMioQjef7tTyFX65U7IUpQjKpk+VyrksvTs4oRWwIuNJe7iIIEOTCsnXNYYaNj3SRXOP5Atf+A4O6yOm5kmveURVkVUb/Ta1MT+nv1B/fvQdHGyIRfw7aB4OEtGe6sJn6+BK6AFVb7Q8E1m+PsuxYGzKQNCk/Ed/XTuTwKno8DdPMpmVt0BkN7xrOGLn1A6k4rVeNilFOy1/x2NsQXkVLOWGWw===ruJb
+
+Das deb wird mit dem Befehl nachfolgend als tvheadend.list-Textdatei in dem Verzeichniss "/etc/apt/sources.list.d/" mit hinzufügen. Mit dieser Datei hatte ich wegen der unterschiedlichen zuvor versuchten Verionen von TVheadEnd massive Probleme bekommen, siehe oben angegeben. Dies nachfolgende hier funktioniert aber, wenn Sie diese vorherige Datei nicht schon wie bei mir existiert hatte und somit eine echte Neu- und Erstinstallation es bei Ihnen ist. 
+echo "deb http://apt.tvheadend.org/unstable raspbian-stretch main" | sudo tee -a /etc/apt/sources.list.d/tvheadend.list
+sudo apt-get update
+sudo apt-get install tvheadend
+Mit "J" beantworten und es startet von selbst im blauen Menü der Einrichtungsassist von TVheadEnd. 
+
+Falls bei der Ersteinrichtung von TVheadEnd etwas schiefgelaufen ist, kann mit: 
+sudo dpkg-reconfigure tvheadend
+dies korrigiert werden. 
+Oder wenn Sie die Konfiguration vollständig entfernen möchten, verwenden Sie Ihren Paketmanager mit --purge option, z.B.: apt-get remove --purge tvheadend*     
+
+Nachfolgend wird hiermit TVheadEnd wieder erneut gestartet, falls TVheadEnd nicht von selbst startete. 
+sudo service tvheadend restart
+
+Entweder unter der eigenen IP des Raspberrys (In Ihrem Router z.B. Fritzbox steht die IP Adresse Ihres Netzwerkgeräts): 
+http://192.168.178.15:9981
+oder mit dem Hostnamen kann man das Controlpanal von TVheadEnd endlich starten. 
+http://dietpi:9981
+Im Raspberry selbst kann man auch im Browser z.B. Firefox mit 
+http://localhost:9981 
+versuchen, falls dies leichter ist. Oder vorherig Probleme auftauchten. 
+
+
+
+TVheadEnd konfigurieren
+https://www.minipctv.de/tvheadendserver/tvheadend-konfigurieren/
+
+Problemlösungen werden hier beschrieben.
+https://www.siski.de/~carsten/tvheadend.html
+
+Intressante Anleitung und Compilierungsanweiungen. 
+https://wiki.ubuntuusers.de/Tvheadend/
+
+IPTV setup für Neulinge instressant ist dabei Webgrab++
+https://tvheadend.org/boards/4/topics/30601?r=30876
+
+IPTV setup
+https://www.matthuisman.nz/2017/06/libreelec-tvheadend-iptv-freeview-nz.html
+
+
