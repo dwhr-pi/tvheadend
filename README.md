@@ -175,4 +175,7 @@ https://tvheadend.org/boards/4/topics/30601?r=30876
 IPTV setup
 https://www.matthuisman.nz/2017/06/libreelec-tvheadend-iptv-freeview-nz.html
 
-
+Konfigutration von TVheadEnd
+https://blog.helmutkarger.de/raspberry-media-center-teil-9-tvheadend/
+https://www.electronic-research.de/tvheadend-iptv-kabel-sattv-und-epg.html
+https://www.google.com/search?q=TVheadEnd&oq=TVheadEnd&aqs=chrome..69i57j69i59l2j69i60l4j69i65.4466j0j7&sourceid=chrome&ie=UTF-8
