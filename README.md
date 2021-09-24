@@ -133,4 +133,4 @@ sudo service tvheadend restart
 Weil es fehlgeschlagen ist, die Datei etc/apt/sources.list.d/tvheadend wieder löschen und dann sudo apt-get update und eine andere Version von tvheadend dazu versuchen. 
 Fehlerursache das die deb nicht signiert ist.
 * https://www.google.com/search?q=debian+apt+nicht+signierte+installieren&oq=debian+apt+nicht+signierte+installieren&aqs=chrome..69i57j0i333.22622j0j7&sourceid=chrome&ie=UTF-8
-
+* https://www.heise.de/tipps-tricks/DEB-in-Debian-Systemen-installieren-so-klappt-s-4926444.html
