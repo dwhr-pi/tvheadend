@@ -106,7 +106,7 @@ Weitere Informationen auf YouTube
 Meine Installation
 -------------------
 Auf einem Raspberry Pi Zero, mit einem Raspberry TVheadend habe ich die TVheadEnd auf ein 32 bit ARM6 Betriebssystem Variante von DietPI's Debian Bullseye versucht zu installieren. 
-Leider ohne erfolg.
+Leider oft ohne Erfolg! Doch hiermit gelang es mir, die "HTS Tvheadend 4.3-1979~g8fc2dfa7e" endlich und funktionierend hinzubekommen.
 
 Quelle: https://tvheadend.org/projects/tvheadend/wiki/AptRepositories
 
