@@ -89,6 +89,7 @@ For more information about building, including generating packages, please visit
 
 Weitere Informationen
 -------------------
+* https://tvheadend.org/projects/tvheadend/wiki/AptRepositories
 * https://www.minipctv.de/tvheadendserver/tvheadend-auf-dem-raspberrypi-installieren/
 * http://raspberry.tips/raspberrypi-tutorials/raspberry-pi-live-fernsehen-mit-tvheadend
 * https://canox.net/2021/01/tvheadend-unter-raspberry-pi-os-installieren/
