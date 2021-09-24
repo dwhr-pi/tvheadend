@@ -161,6 +161,7 @@ versuchen, falls dies leichter ist. Oder vorherig Probleme auftauchten.
 
 
 TVheadEnd konfigurieren
+-------------------
 https://www.minipctv.de/tvheadendserver/tvheadend-konfigurieren/
 
 Problemlösungen werden hier beschrieben.
@@ -181,3 +182,6 @@ https://www.electronic-research.de/tvheadend-iptv-kabel-sattv-und-epg.html
 
 https://www.google.com/search?q=TVheadEnd&oq=TVheadEnd&aqs=chrome..69i57j69i59l2j69i60l4j69i65.4466j0j7&sourceid=chrome&ie=UTF-8
 https://www.google.com/search?q=tvheadend+einrichten&oq=tvheadend+einrichten+&aqs=chrome..69i57j0i512j0i22i30l8.16501j0j7&sourceid=chrome&ie=UTF-8
+
+No assigned adapters
+https://www.google.com/search?q=No+assigned+adapters&oq=No+assigned+adapters&aqs=chrome..69i57.103586392j0j0&sourceid=chrome&ie=UTF-8
