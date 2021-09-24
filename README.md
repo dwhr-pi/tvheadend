@@ -112,3 +112,19 @@ sudo apt-get -y install coreutils wget apt-transport-https lsb-release ca-certif
 echo "deb http://apt.tvheadend.org/stable raspbian-stretch main" | sudo tee -a /etc/apt/sources.list.d/tvheadend.list
 sudo apt-get update
 
+Ich erhielt folgende Fehlermeldung
+W: GPG-Fehler: http://apt.tvheadend.org/stable raspbian-stretch Release: Die folgenden Signaturen konnten nicht überprüft werden, weil ihr öffentlicher Schlüssel nicht verfügbar ist: NO_PUBKEY 89942AAE5CEAA174
+E: Das Depot »http://apt.tvheadend.org/stable raspbian-stretch Release« ist nicht signiert.
+N: Eine Aktualisierung von solch einem Depot kann nicht auf eine sichere Art durchgeführt werden, daher ist es standardmäßig deaktiviert.
+N: Weitere Details zur Erzeugung von Paketdepots sowie zu deren Benutzerkonfiguration finden Sie in der Handbuchseite apt-secure(8).
+
+weiter ging es mit:
+sudo apt-get install tvheadend
+leider war ab hier schluss...
+E: Paket tvheadend kann nicht gefunden werden.
+
+sudo dpkg-reconfigure tvheadend
+sudo service tvheadend restart
+
+
+
