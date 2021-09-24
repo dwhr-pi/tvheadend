@@ -105,6 +105,9 @@ Weitere Informationen auf YouTube
 
 Meine Installation
 -------------------
+Auf einem Raspberry Pi Zero, mit einem Raspberry TVheadend habe ich die TVheadEnd auf ein 32 bit ARM6 Betriebssystem Variante von DietPI's Debian Bullseye versucht zu installieren. 
+Leider ohne erfolg.
+
 Quelle: https://tvheadend.org/projects/tvheadend/wiki/AptRepositories
 
 bei Usage
@@ -127,5 +130,6 @@ sudo dpkg-reconfigure tvheadend
 sudo service tvheadend restart
 
 
-Weil es fehlgeschlagen ist, die Datei etc/apt/sources.list.d/tvheadend wieder löschen und dann sudo apt-get update und eine andere Version von tvheadend versuchen.
+Weil es fehlgeschlagen ist, die Datei etc/apt/sources.list.d/tvheadend wieder löschen und dann sudo apt-get update und eine andere Version von tvheadend dazu versuchen. 
+Fehlerursache das die deb nicht signiert ist.
 
