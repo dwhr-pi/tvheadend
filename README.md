@@ -95,7 +95,7 @@ Weitere Informationen
 * https://technikkram.net/blog/2018/01/30/tv-server-auf-dem-rasplerry-pi-ein-tutorial-fuer-alle-fernseh-freunde/
 * https://pimylifeup.com/raspberry-pi-tvheadend/
 
-Weitere Informationen auf YoutTube
+Weitere Informationen auf YouTube
 -------------------
 * https://www.youtube.com/watch?v=mZuCIHWR8Vg
 * https://www.youtube.com/watch?v=1TS-Z04toA4
