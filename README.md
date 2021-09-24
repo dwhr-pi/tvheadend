@@ -101,3 +101,14 @@ Weitere Informationen auf YouTube
 * https://www.youtube.com/watch?v=mZuCIHWR8Vg
 * https://www.youtube.com/watch?v=1TS-Z04toA4
 * https://www.youtube.com/watch?v=d2aMYLHD2PQ
+
+
+Meine Installation
+-------------------
+Quelle: https://tvheadend.org/projects/tvheadend/wiki/AptRepositories
+
+bei Usage
+sudo apt-get -y install coreutils wget apt-transport-https lsb-release ca-certificates
+echo "deb http://apt.tvheadend.org/stable raspbian-stretch main" | sudo tee -a /etc/apt/sources.list.d/tvheadend.list
+sudo apt-get update
+
