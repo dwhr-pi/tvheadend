@@ -127,4 +127,5 @@ sudo dpkg-reconfigure tvheadend
 sudo service tvheadend restart
 
 
+Weil es fehlgeschlagen ist, die Datei etc/apt/sources.list.d/tvheadend wieder löschen und dann sudo apt-get update und eine andere Version von tvheadend versuchen.
 
