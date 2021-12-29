@@ -154,19 +154,26 @@ apt-get install sudo; usermod -aG sudo root
 
 
 Nachfolgend wird der Publickey mit diesem Befehl bekannt gegeben und sollte der gleiche sein, wie bei "Anschließend den zuvorgenannten Key" schon der Key von mir mit eingearbeitet worden ist. 
+```
 wget -qO- https://doozer.io/keys/tvheadend/tvheadend/pgp | sudo tee /etc/apt/trusted.gpg.d/tvheadend.asc
-
+```
 Anschließend den zuvorgenannten Key hier mit einfügen, wie in meinem Beispiel oder mein Beispiel dazu verwenden und die Enter/Eingabetaste drücken. 
+```
 sudo wget -qO- https://doozer.io/keys/tvheadend/tvheadend/pgp | sudo apt-key add mQENBFrG/QIBCAC9tQeA0NRCQtu7vG1bBmWJCbsrfmo2lELhnsvUvZSG6C31aVhaVI5+I59rWDKjs4v30f7oGvlLgnRGjElP4+aHmVR53v8s3VCBmNkCO64lGc5Kv05RMsdiXRgCbj4Xzl6gwRbfPZngFta2SusPp0aBPrjqlH0ZEnqa5jFDhE6sVkJLTQXwTGGHGIWg6AL0WqkW/o6+iHTbg+qsW93Ij5FvzB09PNKw9a6i+QZiXK9fvE0qJbKBC0J2jReZjyi7nkyd2rOzkhyuz7xux1wIGn7oXSqusey/VFbTUAiZbVuScIW+rY+JV2HNCQlXLdkMP5aiaXGiLeeF8OFz8qNxwPudABEBAAG0JWh0dHBzOi8vZG9vemVyLmlvL3R2aGVhZGVuZC90dmhlYWRlbmSJAR8EEwEIAAkFAlrG/QICGwMACgkQiZQqrlzqoXRfFggARMKrW7K046ivtG8kIXB9RUCdWFOOCSn2ss2F9hcw8b4ro3mSMqlveVvm3myrA59MwoDpHMTONwe4ODCo89dtF0NlTEM2E6v//qHfVwBBjAJhg7eybuPfNZkkqiRUvMioQjef7tTyFX65U7IUpQjKpk+VyrksvTs4oRWwIuNJe7iIIEOTCsnXNYYaNj3SRXOP5Atf+A4O6yOm5kmveURVkVUb/Ta1MT+nv1B/fvQdHGyIRfw7aB4OEtGe6sJn6+BK6AFVb7Q8E1m+PsuxYGzKQNCk/Ed/XTuTwKno8DdPMpmVt0BkN7xrOGLn1A6k4rVeNilFOy1/x2NsQXkVLOWGWw===ruJb
+```
 
 Das deb wird mit dem Befehl nachfolgend als tvheadend.list-Textdatei in dem Verzeichniss "/etc/apt/sources.list.d/" mit hinzufügen. Mit dieser Datei hatte ich wegen der unterschiedlichen zuvor versuchten Verionen von TVheadEnd massive Probleme bekommen, siehe oben angegeben. Dies nachfolgende hier funktioniert aber, wenn Sie diese vorherige Datei nicht schon wie bei mir existiert hatte und somit eine echte Neu- und Erstinstallation es bei Ihnen ist. 
+```
 echo "deb http://apt.tvheadend.org/unstable raspbian-stretch main" | sudo tee -a /etc/apt/sources.list.d/tvheadend.list
 sudo apt-get update
 sudo apt-get install tvheadend
+```
 Mit "J" beantworten und es startet von selbst im blauen Menü der Einrichtungsassist von TVheadEnd. 
 
 Falls bei der Ersteinrichtung von TVheadEnd etwas schiefgelaufen ist, kann mit: 
+```
 sudo dpkg-reconfigure tvheadend
+```
 dies korrigiert werden. 
 Oder wenn Sie die Konfiguration vollständig entfernen möchten, verwenden Sie Ihren Paketmanager mit --purge option, z.B.: apt-get remove --purge tvheadend*     
 
