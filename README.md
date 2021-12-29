@@ -108,6 +108,14 @@ tvheadend dvb-t2 germany
 * https://buyzero.de/blogs/news/raspberry-pi-dvb-tv-hat-tv-headend-dvb-t2-in-deutschland-einrichten
 * https://tvheadend.org/boards/4/topics/21148
 
+raspberry pi h 265 codec
+-------------------
+* https://www.google.com/search?q=raspberry+pi+h+265+codec&oq=raspberry+pi+h.265+&aqs=chrome.3.69i57j0i22i30l7j0i10i22i30j0i22i30.20796j0j7&sourceid=chrome&ie=UTF-8
+* https://www.areadvd.de/news/neuer-raspberry-pi-4-mit-4k-hevc-decoder/
+* https://github.com/moonlight-stream/moonlight-qt/issues/409
+* https://forums.raspberrypi.com/viewtopic.php?t=308554
+Das originale neue RPpiOs soll dies schon von Hause seit 11/2021 aus können und kann angeblich 4k Videos auf einem Pi 4b 8G wiedergeben.
+
 tvheadend iptv
 -------------------
 * https://www.google.com/search?q=tvheadend+iptv&oq=tvheadend+iptv&aqs=chrome..69i57j69i65j69i60.3857j0j4&sourceid=chrome&ie=UTF-8
