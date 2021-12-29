@@ -114,9 +114,9 @@ raspberry pi h 265 codec
 * https://www.areadvd.de/news/neuer-raspberry-pi-4-mit-4k-hevc-decoder/
 * https://github.com/moonlight-stream/moonlight-qt/issues/409
 * https://forums.raspberrypi.com/viewtopic.php?t=308554
-
-
-Das originale neue RPpiOs soll dies schon von Hause seit 11/2021 aus können und kann angeblich 4k Videos auf einem Pi 4b 8G wiedergeben.
+ 
+Das originale neue Raspberry Pi OS Bullseye soll dies schon von Hause seit 11/2021 aus können und kann angeblich 4k Videos auf einem Pi 4b 8G ruckelfrei wiedergeben.  
+* https://www.raspberrypi.com/documentation/accessories/camera.html
 
 tvheadend iptv
 -------------------
