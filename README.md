@@ -102,6 +102,29 @@ Weitere Informationen auf YouTube
 * https://www.youtube.com/watch?v=1TS-Z04toA4
 * https://www.youtube.com/watch?v=d2aMYLHD2PQ
 
+tvheadend dvb-t2 germany
+-------------------
+* https://www.google.com/search?q=tvheadend+dvb-t2+germany&oq=tvheadend+dvb-t2+&aqs=chrome.3.69i57j0i512j0i22i30l8.12408j0j4&sourceid=chrome&ie=UTF-8
+* https://buyzero.de/blogs/news/raspberry-pi-dvb-tv-hat-tv-headend-dvb-t2-in-deutschland-einrichten
+* https://tvheadend.org/boards/4/topics/21148
+
+tvheadend iptv
+-------------------
+* https://www.google.com/search?q=tvheadend+iptv&oq=tvheadend+iptv&aqs=chrome..69i57j69i65j69i60.3857j0j4&sourceid=chrome&ie=UTF-8
+
+
+Livestreams
+tvheadend iptv facebook youtube
+-------------------
+* https://www.google.com/search?q=tvheadend+iptv+facebook+youtube&source=lmns&bih=912&biw=1302&hl=de&sa=X&ved=2ahUKEwi-5fOKp4n1AhVMO-wKHbbdAY4Q_AUoAHoECAEQAA
+* https://www.reddit.com/r/Streamlink/comments/l2nc6n/guide_how_to_turn_livestreams_from_any_major/
+* https://tvheadend.org/boards/4/topics/43493?r=43567
+* https://cgomesu.com/blog/Tvhlink/
+* https://cgomesu.com/blog/Youtube-as-IPTV-with-TVH/
+
+tvheadend einrichten sat>ip
+-------------------
+* https://www.google.com/search?q=tvheadend+einrichten+sat%3Eip&oq=tvheadend+einrichten+sat%3Eip&aqs=chrome..69i57j0i512j0i22i30.1171j0j4&sourceid=chrome&ie=UTF-8
 
 Meine Installation
 -------------------
