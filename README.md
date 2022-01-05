@@ -200,6 +200,46 @@ Im Raspberry selbst kann man auch im Browser z.B. Firefox mit
 http://localhost:9981 
 versuchen, falls dies leichter ist. Oder vorherig Probleme auftauchten. 
 
+## Manuelle Installation
+Quelle: https://wiki.ubuntuusers.de/Tvheadend/
+
+
+Hinweis!
+Fremdsoftware kann das System gefährden.
+
+Gerade da die Version in den Paketquellen oft veraltet ist, ist es ratsam, Tvheadend manuell zu kompilieren.
+
+build-essential
+* git
+* pkg-config
+* libssl-dev
+* bzip2
+* wget
+* libavahi-client-dev
+* zlib1g-dev
+* libavcodec-dev (universe)
+* libavutil-dev (universe)
+* libavformat-dev (universe)
+* libswscale-dev (universe)
+* libavresample-dev (universe)
+* dvb-apps (universe)
+
+Befehl zum Installieren der Pakete:
+```
+sudo apt-get install build-essential git pkg-config libssl-dev bzip2 wget libavahi-client-dev zlib1g-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev libavresample-dev dvb-apps 
+```
+Oder mit apturl installieren, Link: 
+apt://build-essential,git,pkg-config,libssl-dev,bzip2,wget,libavahi-client-dev,zlib1g-dev,libavcodec-dev,libavutil-dev,libavformat-dev,libswscale-dev,libavresample-dev,dvb-apps
+
+Anschließend kann die aktuellste Version von Github geholt werden und das Programm kompiliert und installiert werden:
+
+```
+git clone https://github.com/tvheadend/tvheadend.git
+make
+sudo make install 
+```
+
+Wichtig ist bei der manuellen Installation außerdem, ein entsprechendes Start-Skript zu erstellen.
 
 
 TVheadEnd konfigurieren
