@@ -226,7 +226,6 @@ build-essential
 
 Befehl zum Installieren der Pakete:
 ```
-sudo apt-get install build-essentials
 sudo apt-get install build-essential git pkg-config libssl-dev bzip2 wget libavahi-client-dev zlib1g-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev libavresample-dev dvb-apps 
 ```
 Oder mit apturl installieren, Link: 
