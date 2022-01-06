@@ -174,6 +174,8 @@ sudo wget -qO- https://doozer.io/keys/tvheadend/tvheadend/pgp | sudo apt-key add
 
 Das deb wird mit dem Befehl nachfolgend als tvheadend.list-Textdatei in dem Verzeichniss "/etc/apt/sources.list.d/" mit hinzufügen. Mit dieser Datei hatte ich wegen der unterschiedlichen zuvor versuchten Verionen von TVheadEnd massive Probleme bekommen, siehe oben angegeben. Dies nachfolgende hier funktioniert aber, wenn Sie diese vorherige Datei nicht schon wie bei mir existiert hatte und somit eine echte Neu- und Erstinstallation es bei Ihnen ist. 
 ```
+echo "deb http://apt.tvheadend.org/unstable xenial main" | sudo tee -a /etc/apt/sources.list.d/tvheadend.list
+
 echo "deb http://apt.tvheadend.org/unstable raspbian-stretch main" | sudo tee -a /etc/apt/sources.list.d/tvheadend.list
 sudo apt-get update
 sudo apt-get install tvheadend
