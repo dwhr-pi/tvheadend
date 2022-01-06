@@ -243,6 +243,20 @@ sudo make install
 Wichtig ist bei der manuellen Installation außerdem, ein entsprechendes Start-Skript zu erstellen.
 
 
+## apturl
+Installation
+Üblicherweise ist apturl in der Standardinstallation enthalten, kann aber auch – wie bei Xubuntu oder Lubuntu – fehlen. Es wird dann über den folgenden Befehl nachinstalliert [1]:
+
+```
+sudo apt-get install apturl 
+```
+
+Oder mit apturl installieren, Link: 
+```
+apt://tvheadend
+```
+Während der Installation wird für die Tvheadend-eigene Benutzerverwaltung ein Administrator angelegt. Dies kann auch nach der Installation geändert werden mittels
+
 TVheadEnd konfigurieren
 -------------------
 TVheadEnd konfigurieren 
