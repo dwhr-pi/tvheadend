@@ -3,10 +3,12 @@
 
 Quelle: https://tvheadend.org/boards/5/topics/10622
 
+Version simple
+```
 git clone --depth 1 https://github.com/tvheadend/tvheadend.git
 ./configure
 ./make
-
+```
 
 Quick & Easy guide to building Tvheadend on a RPi2 (This also works on any other deb system!).
 ```
