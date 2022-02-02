@@ -88,10 +88,10 @@ Quelle: https://gist.github.com/dadosch/23a895f99b41ef95d4e57926bcf34e41
 
 # TV Headend with Raspberry Pi
 ```
-apt-get update
-apt-get install gcc-4.9 g++-4.9 build-essential
-apt-get install unzip git-core pkg-config dvb-apps gettext
-apt-get install libcurl4-openssl-dev libssl-dev libavahi-client-dev zlib1g-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev
+sudo apt-get update
+sudo apt-get install gcc-4.9 g++-4.9 build-essential
+sudo apt-get install unzip git-core pkg-config dvb-apps gettext
+sudo apt-get install libcurl4-openssl-dev libssl-dev libavahi-client-dev zlib1g-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev
 export CC=gcc-4.9
 export GCC=gcc-4.9
 git clone https://github.com/tvheadend/tvheadend
