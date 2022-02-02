@@ -196,5 +196,14 @@ sudo apt-get install debhelper dh-virtualenv
 
 
 Falls auf Debian Bullseye der Fehler: `[debian/rules:5: build] Fehler 2`
-auftritt. Siehe hier: https://debianforum.de/forum/viewtopic.php?t=174285
+auftritt. Siehe hier: https://debianforum.de/forum/viewtopic.php?t=174285 oder (Debian 10 Fehler)[]
+
+
+```
+sudo apt-get install debhelper cdbs automake libtool libusb-1.0-0-dev git-core build-essential libsystemd-dev dh-systemd libev-dev cmake
+```
+
+```
+sudo apt-get install debhelper cdbs automake libtool libusb-1.0-0-dev git build-essential libsystemd-dev dh-systemd libev-dev cmake
+```
 
