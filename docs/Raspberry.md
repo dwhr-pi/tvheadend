@@ -230,4 +230,5 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get install g++-4.9
 sudo apt-get install g++-5
+sudo apt-get install g++-10
 ```
