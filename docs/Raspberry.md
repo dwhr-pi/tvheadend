@@ -14,7 +14,7 @@ Quick & Easy guide to building Tvheadend on a RPi2 (This also works on any other
 ```
 sudo apt-get install git build-essential debhelper pkg-config fakeroot
 sudo apt-get install liburiparser-dev
-sudo apt-get install libcurl4-gnutls-dev
+sudo apt-get install -y libcurl4-gnutls-dev
 
 git clone https://github.com/tvheadend/tvheadend.git build/tvheadend/master
 cd build/tvheadend/master
