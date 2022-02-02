@@ -1,5 +1,6 @@
 # Debian 10 Kernel compiler Fehler
 
+//[debian/rules:5: build] Fehler 2
 
 Quelle: https://debianforum.de/forum/viewtopic.php?t=174285
 
