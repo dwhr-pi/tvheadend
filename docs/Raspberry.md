@@ -199,14 +199,12 @@ Falls auf Debian Bullseye der Fehler: `[debian/rules:5: build] Fehler 2`
 auftritt. Siehe hier: https://debianforum.de/forum/viewtopic.php?t=174285 oder hier: (Debian 10 Fehler)[Debian10Fehler.md]
 
 
+Normalerweise wie nachfolgend eingeben. 
 ```
 sudo apt-get install debhelper cdbs automake libtool libusb-1.0-0-dev git-core build-essential libsystemd-dev dh-systemd libev-dev cmake
 ```
 
-```
-sudo apt-get install debhelper cdbs automake libtool libusb-1.0-0-dev git build-essential libsystemd-dev dh-systemd libev-dev cmake
-```
-
+Aber auf Bullseye empfehle ich das lieber so: 
 ```
 sudo apt-get install debhelper 
 sudo apt-get install cdbs 
