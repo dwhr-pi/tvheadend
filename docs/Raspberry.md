@@ -220,4 +220,4 @@ sudo apt-get install libev-dev
 sudo apt-get install cmake
 ```
 
-So wie es scheint, muss man einen Umweg über ein älteres Linux oder auf einen anderen Computer mit AMD oder Intel Prozessor es mal versuchen zu kompilieren und die fertige .deb Datei dann herüber nach dem Rasperry mit dem Bullseye kopieren.... 
+So wie es scheint, muss man einen Umweg über ein älteres Linux oder auf einen anderen Computer mit AMD oder Intel Prozessor es mal versuchen zu kompilieren und die fertige .deb Datei dann herüber nach dem Rasperry mit dem Bullseye kopieren.... Oder auf ein neues Kernel von Debian hoffen.
