@@ -221,3 +221,10 @@ sudo apt-get install cmake
 ```
 
 So wie es scheint, muss man einen Umweg über ein älteres Linux oder auf einen anderen Computer mit AMD oder Intel Prozessor es mal versuchen zu kompilieren und die fertige .deb Datei dann herüber nach dem Rasperry mit dem Bullseye kopieren.... Oder auf ein neues Kernel von Debian hoffen.
+
+
+# g++-4.9 Fehler
+
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install g++-4.9
