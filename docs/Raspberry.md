@@ -59,7 +59,7 @@ sudo apt-get install libcurl4-gnutls-dev
 
 Run the script again.
 
-Weitere Fehlerbehbung siehe ganz unten bei Fehler beim Compilieren.
+Weitere Fehlerbehebung siehe ganz unten bei: Fehler beim Compilieren.
 
 
 Once the build has completed you'll find the built debian package (E.g tvheadend_4.1-368~geeda7d7_armhf.deb) in build/tvheadend.
