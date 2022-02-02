@@ -13,6 +13,8 @@ git clone --depth 1 https://github.com/tvheadend/tvheadend.git
 Quick & Easy guide to building Tvheadend on a RPi2 (This also works on any other deb system!).
 ```
 sudo apt-get install git build-essential debhelper pkg-config fakeroot
+sudo apt-get install liburiparser-dev
+sudo apt-get install libcurl4-gnutls-dev
 git clone https://github.com/tvheadend/tvheadend.git build/tvheadend/master
 cd build/tvheadend/master
 ```
@@ -46,13 +48,19 @@ Note that the Raspberry Pi is not powerful enough to do transcoding via the cpu,
 ./configure --help
 ```
 
+
+## Fehler Part 1
 The Autobuild.sh script will complain about other missing dependencies you need to install those, e.g.
 
 ```
-sudo apt-get install libcurl14-gnutls-dev liburiparser-dev
+sudo apt-get install liburiparser-dev
+sudo apt-get install libcurl4-gnutls-dev
 ```
 
 Run the script again.
+
+Weitere Fehlerbehbung siehe ganz unten bei Fehler beim Compilieren.
+
 
 Once the build has completed you'll find the built debian package (E.g tvheadend_4.1-368~geeda7d7_armhf.deb) in build/tvheadend.
 
@@ -175,4 +183,18 @@ chmod +x /etc/init.d/tvheadend
 update-rc.d tvheadend defaults
 ```
 
+
+
+## Fehler beim Compilieren
+
+Falls ein Fehler wie: `dpkg-checkbuilddeps: Fehler: Nicht erfüllte Bauabhängigkeiten: libcurl4-gnutls-dev liburiparser-dev`
+auftritt. Siehe hier: https://github.com/nylas/make-deb/issues/2
+Versuche: 
+```
+sudo apt-get install debhelper dh-virtualenv
+```
+
+
+Falls auf Debian Bullseye der Fehler: `[debian/rules:5: build] Fehler 2`
+auftritt. Siehe hier: https://debianforum.de/forum/viewtopic.php?t=174285
 
