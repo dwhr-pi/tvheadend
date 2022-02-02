@@ -4,7 +4,7 @@
 
 Quelle: https://debianforum.de/forum/viewtopic.php?t=174285
 
-Nachfolgend ist für AMD 64 Bit Systeme. Nicht für ARM64 geeignet. 
+Nachfolgend ist nur für AMD 64 Bit Systeme. Leider nicht für ARM 64 geeignet. 
 ```
 apt-get install -y libncurses-dev wget bzip2 make build-essential bc chrpath gawk texinfo libsdl1.2-dev whiptail diffstat cpio libssl-dev flex
 ```
@@ -36,3 +36,4 @@ make -j16 deb-pkg LOCALVERSION=-Test KDEB_PKGVERSION=1
 
 ```
 ```
+Also auf ein System Update von Debian hoffen... 
