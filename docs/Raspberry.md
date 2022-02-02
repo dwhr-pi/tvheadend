@@ -225,6 +225,8 @@ So wie es scheint, muss man einen Umweg über ein älteres Linux oder auf einen 
 
 # g++-4.9 Fehler
 
+```
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get install g++-4.9
+```
