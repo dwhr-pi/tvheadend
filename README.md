@@ -141,6 +141,8 @@ Meine Installation
 Auf einem Raspberry Pi Zero, mit einem Raspberry TVheadend habe ich die TVheadEnd auf ein 32 bit ARM6 Betriebssystem Variante von DietPI's Debian Bullseye versucht zu installieren. 
 Leider oft ohne Erfolg! Doch hiermit gelang es mir, die "HTS Tvheadend 4.3-1979~g8fc2dfa7e" endlich und funktionierend hinzubekommen.
 
+`Hinweis` TvHeadEnd funktioniert nur auf 32 Bit Betriebssystemen, auf 64 Bit habe ich es bisweilen nicht funktiontüchtig bekommen. Vorraussichtlich gilt die auch beim Kompilieren, nur auf 32 Bit Systemen erfolgreich. 
+
 Quelle: https://tvheadend.org/projects/tvheadend/wiki/AptRepositories
 
 bei Usage
@@ -158,10 +160,13 @@ Diese nachfolgende Anleitung ab hier brachte den erwünschten Erfolgt!
 Vorheriges brauch nicht unbedingt beachtet zu werden.
 
 Schritt 1.
+```
 sudo apt-get -y install coreutils wget apt-transport-https lsb-release ca-certificates
+```
 Ich habe bei mir den Super User-Mode auf den "root"-Benutzer gesetzt/gelegt und ist mit entscheidend wie sie sich in den Raspberry gewöhnlich einloggen, um damit auch TVheadend zu starten. 
+```
 apt-get install sudo; usermod -aG sudo root
-
+```
 
 Nachfolgend wird der Publickey mit diesem Befehl bekannt gegeben und sollte der gleiche sein, wie bei "Anschließend den zuvorgenannten Key" schon der Key von mir mit eingearbeitet worden ist. 
 ```
